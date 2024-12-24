@@ -1,0 +1,50 @@
+MongoDB Atlas: cloud database service
+MongoDB compass: GUI
+mongod: MongoDBserver
+mongosh: MongoDB shell
+
+installing <--i am using cmd-line not GUI
+	https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-debian/	<--for debian12 (bookworm)
+	> sudo apt-get update
+	> sudo apt-get install gnupg curl
+	> curl -fsSL https://www.mongodb.org/static/pgp/server-8.0.asc | \
+   sudo gpg -o /usr/share/keyrings/mongodb-server-8.0.gpg \
+   --dearmor
+	> echo "deb [ signed-by=/usr/share/keyrings/mongodb-server-8.0.gpg ] http://repo.mongodb.org/apt/debian bookworm/mongodb-org/8.0 main" | sudo tee /etc/apt/sources.list.d/mongodb-org-8.0.list
+	> sudo apt-get update
+	> sudo apt-get install -y mongodb-org
+
+to run
+	> sudo service mongod start
+	> mongosh 	
+
+
+commands (semi-colon is optional)
+to see list of database
+	> show databases
+to use database
+	> use <database_name>
+see list of tables
+	> show collections
+to the content of collection
+	> db.<collectio_name>.find()
+to delete collections
+	> db.<collection_name>.drop()
+
+Create a database: 	<--if you dont create databse, Spring will use "test" database by default
+	use <database_name> (e.g., use chatapp).
+		> use <database_name>;
+	Insert data: Insert documents into a collection to create the database and collection.
+		> db.rooms.insertOne({ name: "Room1", description: "Chat room 1" });
+	Verify creation: Use show databases to check if the database has been created.
+		> show databases;
+
+to update
+	Adding a message: Use $push to add to the messages array.
+	Replacing messages: Use $set to replace the entire array.
+	
+	> db.rooms.updateOne(
+	    { roomId: "room-group-2" }, 
+	    { $push: { messages: { sender: "batman", content: "I am Batman" } } } 
+	   )
+

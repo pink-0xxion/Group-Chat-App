@@ -1,0 +1,67 @@
+Technologies used
+backend
+	spring boot
+	simple rest apis
+	web socket
+	mongodb
+
+frontend
+	react
+	tailwindcss
+	websocket client lib
+
+depedencies
+	spring web
+	websocket
+	spring boot devtools
+	lombok
+	spring data mongodb
+
+Anotations
+@Document(collation = "rooms")
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+@Id
+@RestController
+@RequestMapping("/api/v1/rooms")
+@PostMapping
+@GetMapping
+
+@PathVariable
+@RequestBody
+@RequestParam
+@PathParam
+@Configuration
+@EnableWebSocketMessageBroker
+@Override
+@MessageMapping("/sendMessage/{roomId}") //messages come to this
+@SendTo("/topic/room/{roomId}")  
+@DestinationVariable
+@CrossOrigin("http://localhost:3000")
+-----
+ResponseEntity
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

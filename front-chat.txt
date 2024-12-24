@@ -1,0 +1,60 @@
+vite
+	https://v3.vitejs.dev/guide/
+react router dom
+	https://reactrouter.com/home
+tailwind
+	https://tailwindcss.com/docs/guides/vite
+react hot toast
+	https://react-hot-toast.com/
+
+> npm install @stomp/stompjs sockjs-client
+
+> npm install axios
+
+flaticon
+	https://www.flaticon.com/
+
+react icons
+	https://react-icons.github.io/react-icons/
+	> npm i react-icons
+
+avatar generator
+	https://avatar-placeholder.iran.liara.run/avatars/male
+
+chatgpt
+	timeAgo()
+		prompt: create javascript function get show time in ago
+	onKeyDown	
+		prompt: i have button to send message but i want to press enter on keyboard to send message in reactjs
+
+
+// fixed w-full <--use together, fixed means "position: fixed"
+// absolute/fixed bottom-0 <--to place in bottom
+// right-0 <--to place in right side
+// left-0 <--to place in left side
+
+/*
+two ways to make element center
+1: margin: 200px auto; <--left/right auto
+2: display: flex; justify-content: center; align-items: center; height: 100vh;
+    always make 2 divs as the child will be centered, the parent one is flex 
+*/
+
+
+/*
+use "border" in style to debug css 
+*/
+
+/*
+setDetail({
+    ...detail,
+    [event.target.name]: event.target.value,
+});
+
+both are different
+
+setMessages((prev) => [...prev, newMessage]);
+*/
+
+
+
